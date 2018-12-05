@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+$bgcolor: #FFFFFF;
+$sale: #cb3830;
+$excl: #1b9800;
+$spcl-font-color: #fff;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bgcolor;
+  font-family: arial, verdana, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 10px;
+}
+
+$colors: (
+  primary: #454545,
+  secondary: #ffffff
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+.container {
+  max-width: 1250px;
+  margin: 30px auto;
+  .header {
+    background-color: #ddf2f3;
+    color: color(primary);
+    padding: 10px;
+  }
+  .row {
+    display: flex;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .col-6 {
+      flex: 1;
+      order: 1;
+
+      @media screen and (max-width: 600px) {
+        background-color: #ff0000;
+        display: block;
+        width: 100%;
+
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    margin: 20px;
+  }
+}
+#main {
+
+  .row{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+      .left-col {
+        flex: 1;
+        order: 1;
+        width: 50%;
+        @media only screen and (max-width: 600px) {
+          text-align: center;
+          width: 100%;
+        }
+        h1 {
+          padding: 0px;
+          margin: 0px;
+        }
+      }
+      .right-col {
+          order: 2;
+          text-align: right;
+          height: 30px;
+          line-height: 30px;
+          width: 50%;
+          @media only screen and (max-width: 600px) {
+            text-align: center;
+            width: 100%;
+          }
+      }
+    .col {
+        flex: 1;
+        padding: 0px;
+        margin: 0px;
+        width: 33.3%;
+        @media only screen and (max-width: 600px) {
+          margin-bottom: 10px;
+          text-align: center;
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+        }
+        .sale-flag {
+          .sale {
+            display:inline;
+            background-color:$sale;
+            color: $spcl-font-color;
+            padding: 15px 30px;
+            text-align: center;
+            height: 50px;
+            line-height: 25px;
+            margin-bottom: 20px;
+          }
+          .false {
+            display: none;
+          }
+          .exclusive {
+            display: inline;
+            background-color: $excl;
+            color: $spcl-font-color;
+            padding: 15px;
+            text-align: center;
+            height: 50px;
+            line-height: 23px;
+            margin-bottom: 20px;
+          }
+          .false {
+            display: none;
+          }
+        }
+        .prod-details {
+          margin-top: 30px;
+          .prod-name {
+            font-size: 18px;
+            font-weight: bold;
+            float: left;
+            height: 65px;
+            line-height: 25px;
+            width: 60%;
+            @media only screen and (max-width: 600px) {
+              text-align: center;
+              width: 100%;
+            }
+          }
+          .prod-price {
+            float: right;
+            font-size: 25px;
+            font-weight: bold;
+            @media only screen and (max-width: 600px) {
+              text-align: center;
+              width: 100%;
+            }
+          }
+        }
+        li {
+          border: 1px solid #cfcfcf;
+          float: left;
+          list-style: none;
+          padding: 10px;
+          height: 420px;
+          min-height: 420px;
+          width: 25%;
+          @media only screen and (max-width: 600px) {
+            text-align: center;
+            width: 100%;
+          }
+        }
+    }
+
+    @media screen and (min-width: 576px) {
+      flex-direction: row;
+      flex: 0 0 20vw;
+    }
+  }
+  .header-bg {
+    background-color: #ddf2f3;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
