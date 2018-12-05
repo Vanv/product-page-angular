@@ -1,4 +1,4 @@
-# ProductPage
+# Product Page
 
 This project is created using angular.
 To initializeApp please add dependencies - npm
@@ -13,6 +13,8 @@ Install the npm packages (in the project directory)
   ```
   ng serve
   ```
+
+Products are pulling from JSON file under assets/data/products.json
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
 
