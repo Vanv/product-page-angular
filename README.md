@@ -1,4 +1,18 @@
-# AkProductPage
+# ProductPage
+
+This project is created using angular.
+To initializeApp please add dependencies - npm
+
+Install the npm packages (in the project directory)
+```
+  npm install
+  ```
+
+  Then run ng serve to run local environment
+
+  ```
+  ng serve
+  ```
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
 

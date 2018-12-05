@@ -1,16 +1,10 @@
 <div class="container">
 
     <div id="main">
-      <!--Header-->
-      <!-- {{title}} = {{message}} -->
+      <!--Header Section-->
       <header-component></header-component>
-      <!--Products-->
-      <product-component (childEvent)="message=$event" [parentData]="name"></product-component>
+      <!--Products Rendering-->
+      <product-component></product-component>
 
     </div>
-
-  <!-- <div id="main">
-    <article>Article</article>
-    <aside>Aside</aside>
-  </div> -->
 </div>

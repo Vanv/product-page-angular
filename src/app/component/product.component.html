@@ -1,12 +1,7 @@
+<!--Products Display Component-->
 <div>
-  <select (change)="selectChangeHandler($event)" id="filter" class="" name="">
-      <option *ngFor="let filt of filter" [value]="filt.Name">{{ filt.Name }}</option>
-  </select><br/><br />
-  selected values is {{ selectedValue }}
-  <br/><br /><br/><br />
   <div class="row">
-
-    <ul class="col"  >
+    <ul class="col">
       <li *ngFor="let product of products">
         <img src="{{product.productImage}}" />
         <div class="sale-flag">
@@ -17,8 +12,6 @@
 
           <div ng-repeat="productName in productNames | orderBy: 'productName'" class="prod-name">
             {{product.productName }}
-            <br/>
-            Size: {{ product.size }}
           </div>
 
            <div class="prod-price">
@@ -29,48 +22,5 @@
       </li>
     </ul>
 
-    <!-- <div class="col" >
-      <img src="../assets/Products/product-1.jpg" />
-      <div class="sale-flag">
-        <div class="sale">Sale</div>
-        <button (click) = "onClick()">Sale</button>
-
-        {{greeting}}
-      </div>
-      <div class="prod-details">
-        <div class="prod-name">
-
-          {{product.productName}}
-        </div> -->
-
-        <!-- <div *ngIf="true" class="prod-name">
-          Product name <br/>
-          Parent Comp Value: {{"Hello " + parentData}}
-        </div>
-        <div *ngFor ="let salecolor of salecolors; index as i">
-          {{i}} - {{salecolor}}
-        </div> -->
-
-        <!-- <button type="button" (click)="fireEvent()" name="button">Send Event</button> -->
-        <!-- <h3>{{person | json}}</h3> -->
-
-        <!-- <div class="prod-price">
-          {{products.price | currency }}
-
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="col2">
-      <img src="../assets/Products/product-2.jpg" />
-      <div class="sale-flag">
-        <div class="exclusive">Exclusive</div>
-      </div>
-    </div>
-    <div class="col3">
-      <img src="../assets/Products/product-3.jpg" />
-    </div>
-    <div class="col4">
-      <img src="../assets/Products/product-4.jpg" />
-    </div> -->
   </div>
 </div>
